@@ -81,12 +81,21 @@ services:
       - "8000:8080"
 
   ngrok:
-    image: wernight/ngrok
+    image: ngrok/ngrok:latest
+    restart: unless-stopped
+    networks:
+      - mynetwork
+    links:
+      - itop
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
     volumes:
-      - ./ngrok.yml:/home/ngrok/.ngrok2/ngrok.yml
+      - ./ngrok.yml:/etc/ngrok.yml
     ports:
-      - "4040:4040"
-    command: ["ngrok", "http", "8080"]
+      - 4040:4040
 
 networks:
   mynetwork:

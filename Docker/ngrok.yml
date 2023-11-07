@@ -1,2 +1,8 @@
-authtoken: ${NGROK_AUTHTOKEN}
-web_addr: 0.0.0.0:4040
+authtoken: 2VFfGl1lyPaWjNU4PMfSfetvL2m_Y7bypDmSf6RfWkrVLrnu
+web_addr: 127.0.0.1:4040
+region: eu
+version: 2
+tunnels:
+  httpbin:
+    proto: http
+    addr: 8080
