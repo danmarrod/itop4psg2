@@ -1,4 +1,4 @@
-authtoken: 2VFfGl1lyPaWjNU4PMfSfetvL2m_Y7bypDmSf6RfWkrVLrnu
+authtoken: ${NGROK_TOKEN}
 web_addr: 127.0.0.1:4040
 region: eu
 version: 2
